@@ -1,0 +1,445 @@
+* {
+  box-sizing: border-box;
+}
+html body{
+  height: 100vh;
+  background-color: #EAE0D5;
+}
+
+/* preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 142px;
+    height: 40px;
+    margin: -20px 0 0 -71px;
+    background: white;
+
+    .dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 12px;
+      left: 15px;
+      background: #816f63;
+      border-radius: 50%;
+      transform: translateX(0);
+      animation: dot 2.8s infinite;
+    }
+
+    .dots {
+      transform: translateX(0);
+      margin-top: 12px;
+      margin-left: 31px;
+      animation: dots 2.8s infinite;
+
+      span {
+        display: block;
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-left: 16px;
+        background: #816f63;
+        border-radius: 50%;
+      }
+    }
+
+    @keyframes dot {
+      50% {
+        transform: translateX(96px)
+      }
+    }
+
+    @keyframes dots {
+      50% {
+        transform: translateX(-31px)
+      }
+    }
+  }
+}
+
+// The side navigation menu  
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed;  
+  z-index: 1;  
+  top: 0;  
+  left: 0;
+  background-color: #816f63;  
+  overflow-x: hidden;  
+  padding-top: 10em;  
+  transition: 0.5s;  
+  
+  // The navigation menu links 
+  a {
+    padding: .3em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: black;
+  }
+
+  #closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+
+#menuIcon i{
+  font-size: 1.4em; 
+  padding: 1em 0 0 1em;
+}
+ 
+// landing page content
+#main {
+  transition: margin-left .5s;
+  display: flex;
+  padding: 0 9em 1em 4em;
+   
+
+  .intro .avatar{
+    flex: 50%;
+  }
+
+  .intro{
+    font-size: 1.2em;
+    padding: 0 5em 0 5em;
+    margin-top: 2em;
+    h1{
+      margin-bottom: 1em;
+    }
+    p{
+      margin-bottom: 3.5em;
+    }
+   
+     
+  }
+  .btn{
+    font-size: 1.1em;
+    padding: .6em .9em;
+    color: #22333B;
+    background-color: #EAE0D5;
+    border: 2px solid #816f63;
+    border-radius: 30px;
+  }
+  a:hover {
+    color: #816f63;
+  }
+
+   
+  .avatar-top{
+    display: none;
+  }
+
+  .avatar {
+    margin-top: 4em;
+    img{
+      border-radius: 50%;
+      vertical-align: middle;
+      width: 13em;
+      height: 13em;
+    }
+  }
+}
+footer{
+  background-color: #fff;
+  transition: margin-left .5s;
+  height: 24%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+ 
+  i{
+    color: #22333B;
+    font-size: 2.9em;
+    padding: .7em .5em .5em .5em;
+  }
+
+  .copyright{
+    font-size: .6em;
+  }
+  
+}
+
+//about page
+
+.about{
+  display: flex;
+  flex-direction: column;
+   
+  .aboutAvatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+    img{
+      justify-content: center;
+      border-radius: 50%;
+      width: 9em;
+      height: 9em;
+    }
+  }
+  p{
+    padding-left: 3em;
+    font-size: 1.1em;
+  }
+
+
+  .moreAboutMe{
+    display: flex;
+    margin-top: 1em;
+
+    p{
+      width: 70%;
+      margin-left: 1em; 
+    }
+    .btn{
+      height: 30%;
+      padding: 1em .9em 1em .9em!important; 
+      font-size: .9em !important;
+      margin-left: 4em;
+      margin-top: .5em;
+    }
+    
+  }
+}
+
+// contact me page
+
+.contact{
+  justify-content: center;
+  input, textarea{
+    width: 150%;
+  }
+  .btn{
+    margin-top: 1.5em;
+    margin-left: .5em;
+    padding: .2em .8em .3em .8em!important;
+  }
+  
+}
+
+// portfolio page
+.portfolio{
+  padding: 0;
+  margin: 3em 0 0 3em ;
+  .cardBlock{
+      height: 16em;
+      padding: 0 1em 1em 1em;
+    }
+  .card{
+     
+    border-radius: 20px;
+    border: 3px solid #e4d6cd;
+     
+    height: 200px;;
+  } 
+  h5{
+    font-size: 1em;
+    height: 45%;
+    padding: 1em .2em;
+     
+  }
+  a{
+    border: 1px solid #e4d6cd!important; 
+    border-radius: 10px!important;
+    background-color: #fff!important; 
+    margin: 1.5em;
+    font-size: .7em!important;
+  }
+   
+ 
+}
+
+
+
+
+ 
+ 
+
+@media only screen and (max-width: 64em){
+  /*tablets*/
+  #main {
+    padding-right:6em;
+    .intro{
+      padding: 0 2em 0 2em;
+      margin-top: 2em;
+      h1{
+        margin-bottom: 1em;
+      }
+      p{
+        font-size: .9em;
+        margin-bottom: 3.5em;
+      }
+    }
+    .btn{
+      font-size: .9em;
+      padding: .6em .9em;
+    }
+    .avatar {
+      margin-top: 6em;
+      img{
+        border-radius: 50%;
+        vertical-align: middle;
+        width: 10em;
+        height: 10em;
+      }
+    }
+  }
+
+  footer{
+    height: 10%;
+    i{
+      font-size: 2em;
+      padding-top: .3em;
+    }
+  }
+
+  .moreAboutMe{
+    p{
+      font-size: .9em;
+      line-height: 30px;
+    }
+  }
+
+  // portfolio page
+  .portfolio{
+    padding-left: 2em!important;
+    padding-right: 2em!important;
+    .cardBlock{
+      height: 15em;
+    }
+    h5{
+      font-size: .8em;
+      height: 40%;
+      padding: .5em 0;
+    }
+    a{  
+      margin: 1em;
+      font-size: .5em!important;
+    }
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /*smartphones*/ 
+
+  .sidenav a{
+    font-size: .9em;
+  }
+
+  #main {
+    padding: 0 2em;
+    text-align: center;
+    .avatar-right{
+      display: none;
+    }
+    .avatar-top{
+      display: block;
+      margin: 1em 1.5em;
+      img{
+        width: 5em;
+        height: 5em;
+      }
+    }
+    .intro{
+      padding: 0;
+      h1{
+        font-size: 1em;
+      }
+      p{
+        font-size: .7em;
+        margin-bottom: 3.5em;
+      }
+    }
+    .btn{
+      font-size: .7em;
+      padding: .6em .9em;
+    }
+  }
+
+  footer{
+    i{
+      font-size: 1em;
+      padding-bottom: 1em;
+    }
+  }
+  .about{
+    .aboutContent{
+      p{
+        text-align: left;
+        font-size: .9em;
+        padding-left: 0;
+      }
+    }
+ 
+    .moreAboutMe{
+      display: block!important;
+      p{
+        font-size: .9em;
+        line-height: normal;
+        margin-left: 0!important;
+        width: 100%!important;
+      }
+      a{
+        padding: 0!important;
+        margin-left: 0!important;
+        margin-bottom: 1em;
+      }
+    }
+  } 
+  // portfolio page
+  .portfolio{
+    padding-left: 2em!important;
+    padding-right: 2em!important;
+    .cardBlock{
+      height: 16em;
+    }
+    h5{
+      font-size: 1em;
+      height: 40%;
+      padding: 1em 0;
+    }
+    a{  
+      margin-top: 1em;
+      font-size: .8em!important;
+    }
+  }
+  // contact mobile page
+  .contact{
+    input, textarea{
+      width: 100%;
+    }
+    .btn{
+       
+      margin-top: 1.5em;
+      margin-left: .5em;
+      padding: .4em 1.2em .4em 1.2em!important;
+    }
+    
+  }
+	 
+}

@@ -1,0 +1,464 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body {
+  height: 100vh;
+  background-color: #EAE0D5;
+}
+
+/* preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preloader .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: white;
+}
+
+.preloader .loader .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #816f63;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+          animation: dot 2.8s infinite;
+}
+
+.preloader .loader .dots {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+          animation: dots 2.8s infinite;
+}
+
+.preloader .loader .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #816f63;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #816f63;
+  overflow-x: hidden;
+  padding-top: 10em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: .3em;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav #closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#menuIcon i {
+  font-size: 1.4em;
+  padding: 1em 0 0 1em;
+}
+
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 9em 1em 4em;
+}
+
+#main .intro .avatar {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+#main .intro {
+  font-size: 1.2em;
+  padding: 0 5em 0 5em;
+  margin-top: 2em;
+}
+
+#main .intro h1 {
+  margin-bottom: 1em;
+}
+
+#main .intro p {
+  margin-bottom: 3.5em;
+}
+
+#main .btn {
+  font-size: 1.1em;
+  padding: .6em .9em;
+  color: #22333B;
+  background-color: #EAE0D5;
+  border: 2px solid #816f63;
+  border-radius: 30px;
+}
+
+#main a:hover {
+  color: #816f63;
+}
+
+#main .avatar-top {
+  display: none;
+}
+
+#main .avatar {
+  margin-top: 4em;
+}
+
+#main .avatar img {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 13em;
+  height: 13em;
+}
+
+footer {
+  background-color: #fff;
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  height: 24%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+footer i {
+  color: #22333B;
+  font-size: 2.9em;
+  padding: .7em .5em .5em .5em;
+}
+
+footer .copyright {
+  font-size: .6em;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .aboutAvatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.about .aboutAvatar img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  width: 9em;
+  height: 9em;
+}
+
+.about p {
+  padding-left: 3em;
+  font-size: 1.1em;
+}
+
+.about .moreAboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+}
+
+.about .moreAboutMe p {
+  width: 70%;
+  margin-left: 1em;
+}
+
+.about .moreAboutMe .btn {
+  height: 30%;
+  padding: 1em 0.9em 1em 0.9em !important;
+  font-size: .9em !important;
+  margin-left: 4em;
+  margin-top: .5em;
+}
+
+.contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact input, .contact textarea {
+  width: 150%;
+}
+
+.contact .btn {
+  margin-top: 1.5em;
+  margin-left: .5em;
+  padding: 0.2em 0.8em 0.3em 0.8em !important;
+}
+
+.portfolio {
+  padding: 0;
+  margin: 3em 0 0 3em;
+}
+
+.portfolio .cardBlock {
+  height: 16em;
+  padding: 0 1em 1em 1em;
+}
+
+.portfolio .card {
+  border-radius: 20px;
+  border: 3px solid #e4d6cd;
+  height: 200px;
+}
+
+.portfolio h5 {
+  font-size: 1em;
+  height: 45%;
+  padding: 1em .2em;
+}
+
+.portfolio a {
+  border: 1px solid #e4d6cd !important;
+  border-radius: 10px !important;
+  background-color: #fff !important;
+  margin: 1.5em;
+  font-size: 0.7em !important;
+}
+
+@media only screen and (max-width: 64em) {
+  /*tablets*/
+  #main {
+    padding-right: 6em;
+  }
+  #main .intro {
+    padding: 0 2em 0 2em;
+    margin-top: 2em;
+  }
+  #main .intro h1 {
+    margin-bottom: 1em;
+  }
+  #main .intro p {
+    font-size: .9em;
+    margin-bottom: 3.5em;
+  }
+  #main .btn {
+    font-size: .9em;
+    padding: .6em .9em;
+  }
+  #main .avatar {
+    margin-top: 6em;
+  }
+  #main .avatar img {
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 10em;
+    height: 10em;
+  }
+  footer {
+    height: 10%;
+  }
+  footer i {
+    font-size: 2em;
+    padding-top: .3em;
+  }
+  .moreAboutMe p {
+    font-size: .9em;
+    line-height: 30px;
+  }
+  .portfolio {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
+  .portfolio .cardBlock {
+    height: 15em;
+  }
+  .portfolio h5 {
+    font-size: .8em;
+    height: 40%;
+    padding: .5em 0;
+  }
+  .portfolio a {
+    margin: 1em;
+    font-size: 0.5em !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /*smartphones*/
+  .sidenav a {
+    font-size: .9em;
+  }
+  #main {
+    padding: 0 2em;
+    text-align: center;
+  }
+  #main .avatar-right {
+    display: none;
+  }
+  #main .avatar-top {
+    display: block;
+    margin: 1em 1.5em;
+  }
+  #main .avatar-top img {
+    width: 5em;
+    height: 5em;
+  }
+  #main .intro {
+    padding: 0;
+  }
+  #main .intro h1 {
+    font-size: 1em;
+  }
+  #main .intro p {
+    font-size: .7em;
+    margin-bottom: 3.5em;
+  }
+  #main .btn {
+    font-size: .7em;
+    padding: .6em .9em;
+  }
+  footer i {
+    font-size: 1em;
+    padding-bottom: 1em;
+  }
+  .about .aboutContent p {
+    text-align: left;
+    font-size: .9em;
+    padding-left: 0;
+  }
+  .about .moreAboutMe {
+    display: block !important;
+  }
+  .about .moreAboutMe p {
+    font-size: .9em;
+    line-height: normal;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .about .moreAboutMe a {
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 1em;
+  }
+  .portfolio {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
+  .portfolio .cardBlock {
+    height: 16em;
+  }
+  .portfolio h5 {
+    font-size: 1em;
+    height: 40%;
+    padding: 1em 0;
+  }
+  .portfolio a {
+    margin-top: 1em;
+    font-size: 0.8em !important;
+  }
+  .contact input, .contact textarea {
+    width: 100%;
+  }
+  .contact .btn {
+    margin-top: 1.5em;
+    margin-left: .5em;
+    padding: 0.4em 1.2em 0.4em 1.2em !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
